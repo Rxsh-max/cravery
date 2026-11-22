@@ -1,5 +1,6 @@
-import bodyParser from 'body-parser'
+
 import { config } from 'dotenv'
+import "dotenv/config";
 import express from 'express'
 import cors from 'cors'
 import { connectToDB } from './config/db.js'
@@ -15,7 +16,7 @@ app.use(cors())
 app.use("/api/food",foodRouter);
 app.use("/api/user",userRouter);
 app.use("/api/cart",cartRouter)
-app.use("/api/order",orderRouterRouter)
+app.use("/api/order",orderRouter)
 
 app.use("/images",express.static('uploads'))
 

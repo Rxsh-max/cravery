@@ -27,7 +27,7 @@ export const StoreContextProvider = ({ children }) => {
       await loadCartData(token)
     }
     loadData();
-  }, []);
+  }, [token]);
 
   const addToCart = async(itemId) => {
     if (!cartItems[itemId]) {
